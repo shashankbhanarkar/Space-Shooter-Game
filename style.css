@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, #000, #0d1b2a);
+}
+
+/* Spaceship, enemies, and bullet */
+.spaceship {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: auto;
+}
+
+#player img {
+    width: 100%;
+    height: auto;
+}
+
+.enemy {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: yellow;
+}
+
+/* Touch Controls */
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #777;
+}
+
+button i{
+    font-size: 2.2rem;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .spaceship {
+        width: 30px;
+        height: 45px;
+    }
+
+    .enemy {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bullet {
+        width: 4px;
+        height: 15px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
